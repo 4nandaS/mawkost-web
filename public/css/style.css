@@ -1,0 +1,77 @@
+body {
+  background-color: #f0f0f0;
+}
+  .main-content {
+    background: linear-gradient(to left, #A87961, #d3b092, #e9c1a9);
+    /* background: radial-gradient(circle, #A87961 0%, #d3b092 70%, #e9c1a9 100%); */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+  }
+.custom-navbar {
+  background-color: #A87961; /* Warna yang lebih gelap untuk navbar */
+}
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+  color: white;
+}
+.custom-navbar .nav-link:hover {
+  color: #E4B8A1; /* Warna yang sama dengan latar belakang halaman */
+}
+
+.nav-link {
+  font-size: 20px;
+}
+
+.nav-link-colored {
+  color: whitesmoke;
+}
+
+/* .container {
+  padding: 2rem;
+} 
+
+.slider-wrapper {
+  position: relative;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.slider {
+  display: flex;
+  aspect-ratio: 16 / 9;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hasla(0, 0%, 0%, 0.25);
+  border-radius: 0.5rem;
+} 
+
+.slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+
+.slider {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.slider-nav a {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+  opacity: 1;
+} */
