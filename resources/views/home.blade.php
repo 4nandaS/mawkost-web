@@ -70,15 +70,49 @@
                             </div>
                         </div>
                     </section>  --}}
-                    {{-- <select name="kota" id="kota">
-                        <option >lokasi</option>
-                        <option value="1">malang</option>
-                        <option value="2">surabaya</option>
-                        <option value="3">jogja</option>
-                        <option value="4">bali</option>
-                    </select> --}}
                     <img src="images/orang.png" alt="gambar orang">
                 </div>               
+                    <div class="container rounded-container">
+                        <form method="POST" action="" autocomplete="off">
+                            <div class="row g-2">
+                                <div class="col-md-3">
+                                    <select class="form-select custom-select" id="kota" name="kota">
+                                        <option value="">Kota</option>
+                                        <option value="1">Malang</option>
+                                        <option value="2">Surabaya</option>
+                                        <option value="3">Jogja</option>
+                                        <option value="4">Bali</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <select class="form-select custom-select" id="tipe" name="tipe">
+                                        <option value="">tipe</option>
+                                        <option value="1">Kost</option>
+                                        <option value="2">Kontrakan</option>
+                                        <option value="3">Apartemen</option>
+                                        <option value="4">Vila</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <select class="form-select custom-select" id="tempatTerdekat" name="tempatTerdekat">
+                                        <option value="">Tempat Terdekat</option>
+                                        <option value="1">UB</option>
+                                        <option value="2">UMM</option>
+                                        <option value="3">UM</option>
+                                        <option value="4">BINUS</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" placeholder="Kode Properti" name="keyword">
+                                </div>
+                            </div>
+                            <div class="row g-2 mt-3">
+                                <div class="col-md-3 offset-md-9">
+                                    <input type="submit" value="Cari" class="btn btn-dark w-100">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
             </div>
         </div>
     </main>

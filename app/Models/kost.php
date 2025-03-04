@@ -29,6 +29,7 @@ class Kost extends Model
 
     protected $casts = [
         'harga_kost' => 'integer',
+        'tempat_terdekat' => 'array',
         'fasilitas_kamar' => 'array',
         'fasilitas_bersama' => 'array',
         'foto' => 'array',
@@ -65,7 +66,13 @@ class Kost extends Model
     }
 
     public function fasilitasBersama()
-{
-    return $this->belongsToMany(FasilitasBersama::class, 'fasilitas_bersama_kost', 'kost_id', 'fasilitas_bersama_id');
-}
+    {
+        return $this->belongsToMany(FasilitasBersama::class, 'fasilitas_bersama_kost', 'kost_id', 'fasilitas_bersama_id');
+    }
+
+    // Menambahkan relasi untuk tempat terdekat
+    public function tempatTerdekat()
+    {
+        return $this->belongsToMany(TempatTerdekat::class, 'kost_tempat_terdekat', 'kost_id', 'tempat_terdekat_id');
+    }
 }

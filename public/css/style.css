@@ -28,6 +28,24 @@ body {
   color: whitesmoke;
 }
 
+  .custom-select {
+  background-color: #E4B8A1; 
+  border: 1px solid #A0522D; 
+  color: #000; 
+}
+
+.btn-dark {
+  background-color: #343a40; 
+  border: none;
+}
+
+.rounded-container {
+  border-radius: 15px; /* Mengatur sudut container menjadi bulat */
+  padding: 20px; /* Menambahkan padding di dalam container */
+  background-color: #fff; /* Warna latar belakang container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan untuk efek kedalaman */
+}
+
 /* .container {
   padding: 2rem;
 } 

@@ -40,31 +40,16 @@ class KostResource extends Resource
                     ->options(Kota::all()->pluck('kota', 'id'))
                     ->searchable()
                     ->required(),
-                    MultiSelect::make('tempat_terdekat')
-                    ->options(TempatTerdekat::all()->pluck('nama_tempat', 'id')) // Mengambil nama tempat dari tabel tempat_terdekat
-                    ->reactive() // Menandakan bahwa ini adalah komponen reaktif
-                    ->afterStateUpdated(function ($state, callable $set) {
-                        // Mengambil nama tempat berdasarkan ID yang dipilih
-                        $set('tempat_terdekat', TempatTerdekat::whereIn('id', $state)->pluck('nama_tempat')->toArray());
-                    })
+                MultiSelect::make('tempat_terdekat')
+                    ->options(TempatTerdekat::all()->pluck('nama_tempat', 'id'))
                     ->required(),
                 TextInput::make('harga_kost')->numeric()->required(),
                 MultiSelect::make('fasilitas_kamar')
                     ->options(FasilitasKamar::all()->pluck('fasilitas_kamar', 'id'))
-                    ->reactive()
-                    ->afterStateUpdated(function ($state, callable $set) {
-                        $fasilitasKamarNames = FasilitasKamar::whereIn('id', $state)->pluck('fasilitas_kamar')->toArray();
-                        $set('fasilitas_kamar', $fasilitasKamarNames);
-                    })
                     ->required(),
 
                 MultiSelect::make('fasilitas_bersama')
                     ->options(FasilitasBersama::all()->pluck('fasilitas_bersama', 'id'))
-                    ->reactive()
-                    ->afterStateUpdated(function ($state, callable $set) {
-                        $fasilitasBersamaNames = FasilitasBersama::whereIn('id', $state)->pluck('fasilitas_bersama')->toArray();
-                        $set('fasilitas_bersama', $fasilitasBersamaNames);
-                    })
                     ->required(),
                 Select::make('gender')
                     ->options([
